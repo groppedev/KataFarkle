@@ -1,9 +1,11 @@
-package tdd.milano;
+package tdd.milano.domain;
 
-public class GameScore {
+public class GameScore 
+{
 	private final int resultValue;
 
-	public GameScore(int resultValue) {
+	public GameScore(int resultValue) 
+	{
 		super();
 		this.resultValue = resultValue;
 	}

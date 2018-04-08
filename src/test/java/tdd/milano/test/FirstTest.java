@@ -5,9 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import tdd.milano.Dice;
-import tdd.milano.DiceGame;
-import tdd.milano.GameScore;
+import tdd.milano.domain.Dice;
+import tdd.milano.domain.DiceGame;
+import tdd.milano.domain.GameScore;
 
 @SuppressWarnings("static-method")
 @RunWith(JUnit4.class)

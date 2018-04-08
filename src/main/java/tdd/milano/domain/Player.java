@@ -1,4 +1,4 @@
-package tdd.milano;
+package tdd.milano.domain;
 
 public class Player 
 {

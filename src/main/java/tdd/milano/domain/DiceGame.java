@@ -1,9 +1,8 @@
-package tdd.milano;
+package tdd.milano.domain;
 
 import java.util.Arrays;
 import java.util.Iterator;
 
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.collections4.Predicate;
 
@@ -11,7 +10,6 @@ public class DiceGame implements Iterable<Dice>
 {	
 	private final class PredicateValue implements Predicate<Dice> 
 	{
-		
 		private final int valueCompare;
 
 		public PredicateValue(int valueCompare) {
