@@ -12,7 +12,7 @@ import tdd.milano.domain.DiceGameService;
 import tdd.milano.domain.GameScore;
 import tdd.milano.domain.Player;
 
-public class DiceGameLauncher implements service
+public class DiceGameLauncher
 {
 	public static void main(String[] args) throws ParseException 
 	{
