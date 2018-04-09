@@ -7,6 +7,7 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 import tdd.milano.domain.DiceGameService;
 import tdd.milano.domain.GameScore;
@@ -56,8 +57,19 @@ public class DiceGameLauncher
 		return context.getBean("tdd.milano.diceGameService", DiceGameService.class);
 	}
 
+	/**
+	 *  @see https://dzone.com/articles/using-spring-profiles-xml
+	 *  @see http://www.baeldung.com/spring-profiles
+	 * @return
+	 */
 	private static AbstractApplicationContext context() 
 	{
-		return new ClassPathXmlApplicationContext("injector-config.xml");
+		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("injector-config.xml");
+		ConfigurableEnvironment ctxEnv = ctx.getEnvironment();
+		ctxEnv.addActiveProfile("PRODUCTION");
+		ctxEnv.addActiveProfile("TEST");
+		ctx.refresh();
+		
+		return ctx;
 	}
 }
